@@ -1,0 +1,4 @@
+#!/bin/sh
+[[ -f ~/.Xdefaults ]] && xrdb -merge ~/.Xdefaults
+xterm -e w3m www.google.com
+

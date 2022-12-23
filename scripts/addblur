@@ -1,0 +1,3 @@
+#!/bin/sh
+picom 
+#wal -i /home/xtan/dktop/wallpaper/hots.png
