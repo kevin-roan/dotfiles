@@ -10,3 +10,11 @@ my linux workflow.
 
 
 ![image](https://user-images.githubusercontent.com/103060398/221401443-a20bc8ac-bf0b-4ce9-8a5b-99d100779e16.png)
+
+
+
+## Distro : Arch Linux
+## Terminal : Alacritty
+## Editor : Neovim
+## Wallpaper : Wlop 
+## Music Visualizer : Cava
