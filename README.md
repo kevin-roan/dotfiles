@@ -13,10 +13,10 @@ my linux workflow.
 
 
 
--- Distro : Arch Linux
--- Wm : Dwm 
--- Compositor : Picom
--- Terminal : Alacritty
--- Editor : Neovim
--- Wallpaper : Wlop 
--- Music Visualizer : Cava
+-- Distro : Arch Linux <br>
+-- Wm : Dwm <br>
+-- Compositor : Picom <br>
+-- Terminal : Alacritty <br>
+-- Editor : Neovim <br>
+-- Wallpaper : Wlop <br>
+-- Music Visualizer : Cava 
