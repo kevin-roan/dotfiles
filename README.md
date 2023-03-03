@@ -14,6 +14,8 @@ my linux workflow.
 
 
 ## Distro : Arch Linux
+## Wm : Dwm 
+## Compositor : Picom
 ## Terminal : Alacritty
 ## Editor : Neovim
 ## Wallpaper : Wlop 
