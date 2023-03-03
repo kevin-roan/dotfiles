@@ -48,10 +48,19 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
+# android studio blank screen fix
 
+export _JAVA_AWT_WM_NONREPARENTING=1 exec $1
 
 #userdefinedstuffs.
-nitrogen --restore &
-dwmblocks &
 #you should run all the applications/scripts before executing the actual desktop environment.
+#other wise shit won't work
+dwmblocks &
+nitrogen --restore 
+# picom & # comporsitor
+unclutter & #to auto hide cursor
+autoshutdown &
+# xrandr --output VGA-1 --primary
+# xrandr --output LVDS1 --off # dont know why i wrote this.
 exec dwm
+
