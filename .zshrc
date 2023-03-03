@@ -1,9 +1,7 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+# confirmations, etc.) must go above this block; everything else may go below. if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -111,6 +109,12 @@ source $ZSH/oh-my-zsh.sh
 #path to scripts;
 export PATH=$HOME/.local/bin:$PATH
 
+
+#react native shits
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
 #alias
 alias ll="ls -al"
 alias project="~/Documents/MyProjects/Web/Attendance-Register/ && ls"
@@ -118,15 +122,29 @@ alias yt="ytfzf -t"
 alias notes="cd ~/Documents/Notes/"
 alias dwm="cd ~/.local/src/dwm"
 alias scripts="cd ~/.local/bin"
+alias maachod="chmod +x"
 alias marja="shutdown now"
 alias soja="systemctl suspend"
+alias tuhaikon="whoami"
+alias chut="neofetch"
 alias trashcodes="cd ~/Documents/TrashCodes/"
 alias install="sudo pacman -S"
 alias g="git"
 alias stumdy="cd /home/xtan/Documents/Documents/stumdy/"
 alias pm="pulsemixer"
-alias spotify="flatpak run com.spotify.Client"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+alias study="/home/xtan/Devops/FullStack/Node/"
+alias nd="neovide"
+alias startplasma="sudo systemctl start --now sddm" 
+alias dairy="/home/xtan/Documents/Diary"
+alias fixhdmi=" xrandr --output HDMI-1 --same-as LVDS-1"
+alias start-server="sudo /opt/lampp/lampp start"
+alias open-project="cd /opt/lampp/htdocs/project/" 
+alias mongodb="sudo mongod --fork --logpath /var/lib/mongodb/mongodb.log --dbpath /var/lib/mongodb"
+alias android-studio="cd .android-studio/bin && ./studio.sh"
+alias waylund="sudo systemctl start wayland-container.service"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+export JAVA_HOME="/usr/lib/jvm/java-19-openjdk/bin/java"
+#powerlevel10k bloats
+#to configure powerlevel10k type 'p10k configure' on the console
+source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
