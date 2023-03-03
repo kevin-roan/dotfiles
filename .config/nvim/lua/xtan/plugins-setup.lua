@@ -29,6 +29,13 @@ end
 -- add list of plugins to install
 return packer.startup(function(use)
 	-- packer can manage itself
+	-- auto indent added by ludan
+	use("lukas-reineke/indent-blankline.nvim")
+	-- image viewer like vs code added by ludan
+	use({ "edluffy/hologram.nvim" })
+	-- ranger for neovim installed by ludan
+	use({ "kevinhwang91/rnvimr" })
+
 	use("wbthomason/packer.nvim")
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
@@ -55,6 +62,13 @@ return packer.startup(function(use)
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
 
+	use({
+		"tanvirtin/vgit.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
+
 	-- fuzzy finding w/ telescope
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) -- dependency for better sorting performance
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" }) -- fuzzy finder
@@ -76,7 +90,6 @@ return packer.startup(function(use)
 	-- configuring lsp servers
 	use("neovim/nvim-lspconfig") -- easily configure language servers
 	use("hrsh7th/cmp-nvim-lsp") -- for autocompletion
-	use({ "glepnir/lspsaga.nvim", branch = "main" }) -- enhanced lsp uis
 	use("jose-elias-alvarez/typescript.nvim") -- additional functionality for typescript server (e.g. rename file & update imports)
 	use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
 
@@ -99,6 +112,32 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+
+	-- neodev for init.lua
+	use("folke/neodev.nvim")
+
+	-- neovim-dap debug adapter protocol(debug stuffs,inpsect the state of app etc )
+	use("mfussenegger/nvim-dap")
+
+	-- neovim navic
+	use({
+		"SmiteshP/nvim-navic",
+		requires = "neovim/nvim-lspconfig",
+	})
+	-- barbar.nvim used for tabpages (refer neovim.io)
+	use("nvim-tree/nvim-web-devicons")
+	use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons" })
+	-- project managment
+	use({
+		"ahmedkhalf/project.nvim",
+		config = function()
+			require("project_nvim").setup({
+				-- your configuration comes here
+				-- or leave it empty to use the default settings
+				-- refer to the configuration section below
+			})
+		end,
+	})
 
 	if packer_bootstrap then
 		require("packer").sync()

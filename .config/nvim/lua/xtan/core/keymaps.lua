@@ -4,15 +4,17 @@ local keymap = vim.keymap --for conciseness
 
 --general keymaps
 
---to exit from insert mode to normal mode 
-keymap.set("i","jk", "<ESC>")
+--to save file with control+s like vs-code
+--need to add command here.
+--to exit from insert mode to normal mode
+keymap.set("i", "jk", "<ESC>")
 --to un-highlight searched keyworks
 keymap.set("n", "<leader>nh", ":nohl<CR>")
 --to delete a character, but it does not save the deleted character to any registers.
 keymap.set("n", "x", '"_x"')
---to decrement or increament number by 1  
-keymap.set("n", "<leader>+",  "<C-a>") 
-keymap.set("n", "<leader>-",  "<C-x>")
+--to decrement or increament number by 1
+keymap.set("n", "<leader>+", "<C-a>")
+keymap.set("n", "<leader>-", "<C-x>")
 
 -- window management
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
@@ -33,6 +35,10 @@ keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>")
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
+-- nvim-ranger
+
+keymap.set("n", "<leader>4", ":RnvimrToggle<CR>")
+
 -- telescope
 keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>") -- find files within current working directory, respects .gitignore
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>") -- find string in current working directory as you type
@@ -46,5 +52,5 @@ keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git co
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
 
--- restart lsp server 
+-- restart lsp server
 keymap.set("n", "<leader>rs", ":LspRestart<CR>") -- mapping to restart lsp if necessary

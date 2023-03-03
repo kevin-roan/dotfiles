@@ -98,7 +98,14 @@ lspconfig["jdtls"].setup({
 	on_attach = on_attach,
 })
 
--- configure typescript server with plugin
+-- configure nvim-navic
+local navic = require("nvim-navic")
+require("lspconfig").clangd.setup({
+	on_attach = function(client, bufnr)
+		navic.on_attach(client, bufnr)
+	end,
+})
+
 typescript.setup({
 	server = {
 		capabilities = capabilities,
@@ -126,7 +133,7 @@ lspconfig["emmet_ls"].setup({
 })
 
 -- configure lua server (with special settings)
-lspconfig["sumneko_lua"].setup({
+lspconfig["lua_ls"].setup({
 	capabilities = capabilities,
 	on_attach = on_attach,
 	settings = { -- custom settings for lua
