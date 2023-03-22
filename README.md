@@ -1,5 +1,5 @@
-# dotfiles
-my linux workflow.
+# ..dotfiles
+## my linux workflow.
 
 -- Distro : Arch Linux <br>
 -- Wm : Dwm <br>
@@ -8,3 +8,6 @@ my linux workflow.
 -- Editor : Neovim <br>
 -- Wallpaper : Wlop <br>
 -- Music Visualizer : Cava 
+
+
+# ..Screenshots
