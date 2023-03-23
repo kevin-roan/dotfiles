@@ -11,6 +11,5 @@
 
 
 # ..Screenshots
-
-![image](https://user-images.githubusercontent.com/103060398/227224175-29f39331-6941-409b-b091-d38eebdfd9ed.png)
+![image](https://user-images.githubusercontent.com/103060398/227224518-e97f779e-37ae-49f4-a101-1cd2b47ff776.png)
 
