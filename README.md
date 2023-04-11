@@ -22,7 +22,7 @@
 ![image](https://user-images.githubusercontent.com/103060398/227225924-391786a0-dede-445e-b5bb-227cb107cf4c.png)
 
 Dependencies;
-xorg group 
+`xorg group` 
 install it by 
 >> ubuntu ; sudo apt install xorg <br>
 >>  arch based; sudo pacman -S xorg
