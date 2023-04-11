@@ -13,35 +13,27 @@ static const int vertpad = 6;
 static const int sidepad = 10;
 static const char *fonts[] = {"JetBrains Mono:size=10:antialias=true:autohint:true"};
 static const char dmenufont[] = {"JetBrains Mono:size=10:antialias=true:autohint:true"};
-static char normbgcolor[] = "#11111B";
+static char normbgcolor[] = "#000000";
 static char normbordercolor[] = "#444444";
-static char normfgcolor[] = "#ABB2BF";
-static char selfgcolor[] = "#11111B";
+static char normfgcolor[] = "#ffffff";
 static char selbordercolor[] = "#ffffff";
-static char selbgcolor[] = "#ffffff";
+static char selfgcolor[] = "#00E980";
+static char selbgcolor[] = "#000000";
 static char *colors[][3] = {
-    /*               fg           bg           border   */
-    [SchemeNorm] = {normfgcolor, normbgcolor, normbordercolor},
-    [SchemeSel] = {selfgcolor, selbgcolor, selbordercolor},
-};
-/*static const char col_gray1[] = "#11111B"; //background color, which is grey
-by default static const char col_gray2[] = "#444444"; static const char
-col_gray3[] = "#ABB2BF"; static const char col_gray4[] = "#11111B";  //font
-color of application text static const char col_cyan[] = "#afd700"; static const
-char *colors[][3] = { [SchemeNorm] = {col_gray3, col_gray1, col_gray2},
-    [SchemeSel] = {col_gray4, col_cyan, col_cyan},
-};
-*/
-/* tagging */
-static const char *tags[] = {"カ", "term", "emacs", "brazer", "foo", "irc"};
+   /*               fg           bg           border   */
+   [SchemeNorm] = {normfgcolor, normbgcolor, normbordercolor},
+   [SchemeSel] = {selfgcolor, selbgcolor, selbordercolor},
+ };
 
-static const Rule rules[] = {
-    /* class      instance    title       tags mask     isfloating   monitor */
-    {"Gimp", NULL, NULL, 0, 1, -1},
-    {"Firefox", NULL, NULL, 1 << 8, 0, -1},
-};
+ /* tagging */
+ static const char *tags[] = {"1", "2", "3", "4", "5", "6", "7","8"};
 
-/* layout(s) */
+ static const Rule rules[] = {
+     /* class      instance    title       tags mask     isfloating   monitor */
+     {"Gimp", NULL, NULL, 0, 1, -1},
+     {"Firefox", NULL, NULL, 1 << 8, 0, -1},
+ };
+ /* layout(s) */
 static const float mfact = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster = 1;    /* number of clients in master area */
 static const int resizehints =
@@ -51,9 +43,9 @@ static const int lockfullscreen =
 
 static const Layout layouts[] = {
     /* symbol     arrange function */
-    {"[ ⚡ ]", tile}, /* first entry is default */
-    {"[  ]", NULL}, /* no layout function means floating behavior */
-    {"[   ]", monocle},
+    { "[∀x]",  tile}, /* first entry is default */
+    { "[¬l]",  NULL}, /* no layout function means floating behavior */
+    { "[∃x]", monocle},
 };
 
 #define MODKEY Mod4Mask
