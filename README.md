@@ -1,7 +1,7 @@
 # ..dotfiles
 ## my linux workflow.
 
--- Distro : Arch Linux <br>
+<< Distro : Arch Linux <br>
 -- Wm : Dwm <br>
 -- Compositor : Picom <br>
 -- Terminal : Alacritty <br>
@@ -24,8 +24,8 @@
 Dependencies;
 xorg group 
 install it by 
->> ubuntu ; sudo apt install xorg
->> arch based; sudo pacman -S xorg
+>> ubuntu ; sudo apt install xorg <br>
+>>  arch based; sudo pacman -S xorg
 
 To install;
 
