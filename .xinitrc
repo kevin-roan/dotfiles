@@ -55,12 +55,16 @@ export _JAVA_AWT_WM_NONREPARENTING=1 exec $1
 #userdefinedstuffs.
 #you should run all the applications/scripts before executing the actual desktop environment.
 #other wise shit won't work
-dwmblocks &
+# dwmblocks &
+# dwmblock like stuff
+statusline
+
 nitrogen --restore 
-# picom & # comporsitor
+picom & # comporsitor
 unclutter & #to auto hide cursor
 autoshutdown &
 # xrandr --output VGA-1 --primary
+# xrandr --output HDMI-0 --left-of LVDS
 # xrandr --output LVDS1 --off # dont know why i wrote this.
 exec dwm
 
