@@ -18,7 +18,7 @@ for battery in /sys/class/power_supply/BAT?*; do
 	case "$(cat "$battery/status" 2>&1)" in
     "Full") status="F " ;;
 		"Discharging") status="D " ;;
-		"Charging") status="U " ;;
+		"Charging") status="C " ;;
 		"Not charging") status="N " ;;
 		"Unknown") status="BATTERY DISCONNECTED" ;;
 		*) exit 1 ;;
@@ -29,3 +29,4 @@ for battery in /sys/class/power_supply/BAT?*; do
 	# Prints the info
 	printf "[%s%s%d%%]" "$status" "$warn" "$capacity"; unset warn
 done && printf "\\n"
+

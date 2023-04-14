@@ -1,0 +1,3 @@
+#!/bin/sh
+scrcpy -Sw 
+#scrcpy --serial 5203aebfe89b4333 

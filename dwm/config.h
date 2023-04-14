@@ -1,5 +1,4 @@
 /* See LICENSE file for copyright and license details. */
-
 /* appearance */
 static const unsigned int borderpx = 1; /* border pixel of windows */
 static const unsigned int gappx = 5;
@@ -13,12 +12,12 @@ static const int vertpad = 6;
 static const int sidepad = 10;
 static const char *fonts[] = {"JetBrains Mono:size=10:antialias=true:autohint:true"};
 static const char dmenufont[] = {"JetBrains Mono:size=10:antialias=true:autohint:true"};
-static char normbgcolor[] = "#000000";
+static char normbgcolor[] = "#11111B";
 static char normbordercolor[] = "#444444";
 static char normfgcolor[] = "#ffffff";
 static char selbordercolor[] = "#ffffff";
-static char selfgcolor[] = "#00E980";
-static char selbgcolor[] = "#000000";
+static char selfgcolor[] = "#94E2D5";
+static char selbgcolor[] = "#11111B";
 static char *colors[][3] = {
    /*               fg           bg           border   */
    [SchemeNorm] = {normfgcolor, normbgcolor, normbordercolor},

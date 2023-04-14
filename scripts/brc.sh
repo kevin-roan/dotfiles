@@ -1,8 +1,12 @@
 #!/bin/bash
+
 #to display connected display devices.
+
 xrandr | grep " connected" | cut -f1 -d " "
+
 echo "Enter Display Number: "
 read devicenum
+
   var=("Enter Brightness Value:")
 print_function(){
    echo "Display Brightness Changed Successfully..."
@@ -13,6 +17,7 @@ if [ $devicenum == 1 ]; then
   echo $var
   read brvalue
   print_function "$brvalue" "LVDS-1" 
+
 else 
   echo "Selected Device is HDMI-A-0"
   echo "Enter Brigthness Value:"
