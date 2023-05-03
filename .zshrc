@@ -21,7 +21,9 @@ export ZSH=$HOME/.oh-my-zsh
 
 # ZSH_THEME="spaceship"
 # ZSH_THEME="agnoster"
-ZSH_THEME="norm"
+# ZSH_THEME="norm"
+ZSH_THEME="muse"
+# ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME="spaceship"
@@ -147,7 +149,7 @@ export JAVA_HOME="/usr/lib/jvm/java-19-openjdk/bin/java"
 
 #-------------alias----------------------
 
-alias ll="ls -al"
+alias ll="exa -l"
 alias project="~/Documents/MyProjects/Web/Attendance-Register/ && ls"
 alias yt="ytfzf -t"
 alias notes="cd ~/Documents/Notes/"
@@ -175,6 +177,8 @@ alias android-studio="cd .android-studio/bin && ./studio.sh"
 alias waylund="sudo systemctl start wayland-container.service"
 alias rem="trash-put"
 alias zt="zathura"
+alias ebooks="cd /home/xtan/Sync/EBOKKS/"
+alias uninstall="sudo pacman -Rns"
 
 ## ------------ COLORS ------------ ##
 
@@ -199,10 +203,23 @@ On_Blue='\033[44m'  On_Purple='\033[45m' On_Cyan='\033[46m'  On_White='\033[47m'
 
 ## ------------ COLORS ------------ ##
 
-neofetch
 
+# export QT_QPA_PLATFORM=wayland
 # exodiafetch
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+
+## JAVA HOME FOR REACT NATIVE
+
+JAVA_HOME=$(dirname $( readlink -f $(which java) ))
+JAVA_HOME=$(realpath "$JAVA_HOME"/../)
+export JAVA_HOME
+
+
+# Tmux color fix;
+
+export TERM=xterm-256color
