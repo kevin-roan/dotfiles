@@ -29,17 +29,9 @@ To install;
 
 `git clone https://github.com/kevin-roan/dotfiles.git`
 
-`cd dwm`
+`cd dwm && sudo make clean install`
 
-`sudo make clean install`
-
-`cd ..` 
-
- `cd dwmblocks`
- 
- `sudo make clean install`
- 
- `cd ..`
+ `cd dwmblocks && sudo make clean install`
  
  `mv .xinitrc ~/.xinitrc`
  
