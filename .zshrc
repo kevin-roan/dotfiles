@@ -136,50 +136,6 @@ rehash_precmd() {
 }
 add-zsh-hook -Uz precmd rehash_precmd
 
-#------------path to scripts;------------
-export PATH=$HOME/.local/bin:$PATH
-
-#---------react native shits-------------
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-#------android-studio studio white screen fix
-export JAVA_HOME="/usr/lib/jvm/java-19-openjdk/bin/java"
-
-#-------------alias----------------------
-
-alias ll="exa -l"
-alias project="~/Documents/MyProjects/Web/Attendance-Register/ && ls"
-alias yt="ytfzf -t"
-alias notes="cd ~/Documents/Notes/"
-alias dwm="cd ~/.local/src/dwm"
-alias scripts="cd ~/.local/bin"
-alias maachod="chmod +x"
-alias marja="shutdown now"
-alias soja="systemctl suspend"
-alias tuhaikon="whoami"
-alias chut="neofetch"
-alias trashcodes="cd ~/Documents/TrashCodes/"
-alias install="sudo pacman -S"
-alias g="git"
-alias stumdy="cd /home/xtan/Documents/Documents/stumdy/"
-alias pm="pulsemixer"
-alias study="/home/xtan/Documents/Notes/6thSem/"
-alias nd="neovide"
-alias startplasma="sudo systemctl start --now sddm" 
-alias dairy="/home/xtan/Documents/Diary"
-alias fixhdmi=" xrandr --output HDMI-1 --same-as LVDS-1"
-alias start-server="sudo /opt/lampp/lampp start"
-alias open-project="cd /opt/lampp/htdocs/project/" 
-alias mongodb="sudo mongod --fork --logpath /var/lib/mongodb/mongodb.log --dbpath /var/lib/mongodb"
-alias android-studio="cd .android-studio/bin && ./studio.sh"
-alias waylund="sudo systemctl start wayland-container.service"
-alias rem="trash-put"
-alias zt="zathura"
-alias ebooks="cd /home/xtan/Sync/EBOKKS/"
-alias uninstall="sudo pacman -Rns"
-
 ## ------------ COLORS ------------ ##
 
 # Reset #
@@ -219,7 +175,67 @@ JAVA_HOME=$(dirname $( readlink -f $(which java) ))
 JAVA_HOME=$(realpath "$JAVA_HOME"/../)
 export JAVA_HOME
 
-
-# Tmux color fix;
-
+#tmux color fix;
 export TERM=xterm-256color
+
+#------------path to scripts;------------
+export PATH=$HOME/.local/bin:$PATH
+
+#---------react native shits-------------
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+#------android-studio studio white screen fix
+export JAVA_HOME="/usr/lib/jvm/java-19-openjdk/bin/java"
+
+#
+# #qt5fix
+# export QT_QPA_PLATFORM="qt5ct"
+#
+# #wayland fix
+# export QT_QPA_PLATFORM=wayland
+# export XDG_CURRENT_DESKTOP=sway
+# export XDG_SESSION_DESKTOP=sway
+# export XDG_CURRENT_DESKTOP_TYPE=wayland
+# export GDK_BACKEND="wayland,x11"
+# export MOZ_ENABLE_WAYLAND=1
+
+#-------------alias----------------------
+
+alias ll="exa -l"
+alias project="~/Documents/MyProjects/Web/Attendance-Register/ && ls"
+alias yt="ytfzf -t"
+alias notes="cd ~/Documents/Notes/"
+alias dwm="cd ~/.local/src/dwm"
+alias scripts="cd ~/.local/bin"
+alias maachod="chmod +x"
+alias marja="shutdown now"
+alias soja="systemctl suspend"
+alias tuhaikon="whoami"
+alias chut="neofetch"
+alias trashcodes="cd ~/Documents/TrashCodes/"
+alias install="sudo pacman -S"
+alias g="git"
+alias stumdy="cd /home/xtan/Documents/Documents/stumdy/"
+alias pm="pulsemixer"
+alias study="/home/xtan/Documents/Notes/6thSem/"
+alias nd="neovide"
+alias startplasma="sudo systemctl start --now sddm" 
+alias dairy="/home/xtan/Documents/Diary"
+alias fixhdmi=" xrandr --output HDMI-1 --same-as LVDS-1"
+alias start-server="sudo /opt/lampp/lampp start"
+alias open-project="cd /opt/lampp/htdocs/project/" 
+alias mongodb="sudo mongod --fork --logpath /var/lib/mongodb/mongodb.log --dbpath /var/lib/mongodb"
+alias android-studio="cd .android-studio/bin && ./studio.sh"
+alias waylund="sudo systemctl start wayland-container.service"
+alias rem="trash-put"
+alias zt="zathura"
+alias ebooks="cd /home/xtan/Sync/EBOKKS/"
+alias uninstall="sudo pacman -Rns"
+alias startmariadb="sudo systemctl start mariadb "
+alias startmysql="sudo systemctl start mysqld"
+# alias sd="cd ~ && cd \$(find * -type d | fzf) && tmux"
+# alias sd='tmux new-session -c "$(find * -type d | fzf)" -- nvim'
+alias sd='tmux new-session -c "$(find ~/lxarn-xw ~/projects -type d | fzf)" -- nvim'
+
