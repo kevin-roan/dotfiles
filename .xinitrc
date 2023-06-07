@@ -60,7 +60,7 @@ export _JAVA_AWT_WM_NONREPARENTING=1 exec $1
 statusline
 
 nitrogen --restore 
-picom & # comporsitor
+picom & # compositor
 unclutter & #to auto hide cursor
 autoshutdown &
 # xrandr --output VGA-1 --primary
