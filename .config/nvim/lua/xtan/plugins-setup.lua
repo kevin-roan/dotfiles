@@ -40,7 +40,24 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	use("zchee/deoplete-jedi")
+
+	-- neovim startup page
+	--
+	use({
+		"startup-nvim/startup.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+		config = function()
+			require("startup").setup()
+		end,
+	})
+
+	-- colorscheme devaslife
+	use({
+		"svrana/neosolarized.nvim",
+		requires = { "tjdevries/colorbuddy.nvim" },
+	})
+	-- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -48,6 +65,7 @@ return packer.startup(function(use)
 
 	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
+
 	use("inkarkat/vim-ReplaceWithRegister") -- replace with register contents using motion (gr + motion)
 
 	-- commenting with gc
@@ -56,11 +74,25 @@ return packer.startup(function(use)
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
 
-	-- vs-code like icons
-	use("nvim-tree/nvim-web-devicons")
-
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
+
+	-- ludan addons
+	-- code jump(go-to) plugin
+
+	-- use("davidhalter/jedi-vim")
+
+	-- neovim colorizer
+	use("norcalli/nvim-colorizer.lua")
+
+	use("dinhhuy258/git.nvim")
+
+	use("tjdevries/colorbuddy.nvim")
+
+	-- a snazzy bufferline
+	use({ "akinsho/bufferline.nvim", tag = "*", requires = "nvim-tree/nvim-web-devicons" })
+
+	-- end of ludan addons
 
 	use({
 		"tanvirtin/vgit.nvim",
@@ -77,11 +109,17 @@ return packer.startup(function(use)
 	use("hrsh7th/nvim-cmp") -- completion plugin
 	use("hrsh7th/cmp-buffer") -- source for text in buffer
 	use("hrsh7th/cmp-path") -- source for file system paths
+	use("sbdchd/neoformat") -- code auto-format plugin
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") -- snippet engine
+	use("Tom-xacademy/xa-snippets")
 	use("saadparwaiz1/cmp_luasnip") -- for autocompletion
 	use("rafamadriz/friendly-snippets") -- useful snippets
+	use("SirVer/ultisnips")
+	use("mlaursen/vim-react-snippets")
+	use("neoclide/coc-snippets")
+	use({ "dsznajder/vscode-es7-javascript-react-snippets", run = "yarn install --frozen-lockfile && yarn compile" })
 
 	-- managing & installing lsp servers, linters & formatters
 	use("williamboman/mason.nvim") -- in charge of managing lsp servers, linters & formatters
@@ -126,6 +164,8 @@ return packer.startup(function(use)
 	})
 	-- barbar.nvim used for tabpages (refer neovim.io)
 	use("nvim-tree/nvim-web-devicons")
+	-- use("ryanoasis/vim-devicons")
+
 	use({ "romgrk/barbar.nvim", requires = "nvim-web-devicons" })
 	-- project managment
 	use({

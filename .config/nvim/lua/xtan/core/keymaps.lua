@@ -3,9 +3,8 @@ vim.g.mapleader = " "
 local keymap = vim.keymap --for conciseness
 
 --general keymaps
+-- to move a line to up
 
---to save file with control+s like vs-code
---need to add command here.
 --to exit from insert mode to normal mode
 keymap.set("i", "jk", "<ESC>")
 --to un-highlight searched keyworks
@@ -24,8 +23,8 @@ keymap.set("n", "<leader>sx", ":close<CR>") -- close current split window
 
 keymap.set("n", "<leader>to", ":tabnew<CR>") -- open new tab
 keymap.set("n", "<leader>tx", ":tabclose<CR>") -- close current tab
-keymap.set("n", "<leader>tn", ":tabn<CR>") --  go to next tab
-keymap.set("n", "<leader>tp", ":tabp<CR>") --  go to previous tab
+keymap.set("n", "<leader>tn", ":tabnext<CR>") --  go to next tab
+keymap.set("n", "<leader>tp", ":tabprevious<CR>") --  go to previous tab
 
 -- plugin-keymaps
 

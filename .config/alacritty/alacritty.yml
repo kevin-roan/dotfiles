@@ -4,8 +4,9 @@
 
 ## Import files (Colors, Fonts, Etc)
 import:
-  # - ~/.config/alacritty/colorschemes/catppuccin-mocha.yml
-  - ~/.config/alacritty/colorschemes/Iterm.yaml
+  # - ~/.config/alacritty/colorschemes/Campbell.yaml
+  # - ~/.config/alacritty/themes/seashells.yaml
+  - ~/.config/alacritty/colorschemes/Solarized_dark.yaml
   - ~/.config/alacritty/fonts.yml
 
 ## Set environment variables
@@ -16,12 +17,12 @@ env:
 ## Terminal window settings
 window:
   dimensions:
-    columns: 82
+    columns: 110
     lines: 25
 
   padding:
-    x: 12
-    y: 12
+    x: 6
+    y: 6
 
   decorations: full
   startup_mode: Windowed
@@ -32,7 +33,6 @@ window:
   multiplier: 3
 
 ## Background opacity
-# background_opacity: 1.0
 window.opacity: 1.0
 
 ## Cursor
