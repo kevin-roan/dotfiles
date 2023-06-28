@@ -1,5 +1,6 @@
 ### Showcase 
 <hr>
+
 ![image](https://github.com/kevin-roan/dotfiles/assets/103060398/d9007dcc-28b0-4b44-92d2-7d168e34e968)
 
 ![image](https://github.com/kevin-roan/dotfiles/assets/103060398/5cd91d34-e5ec-413d-ad4a-f3b4a22f03dc)
