@@ -10,14 +10,12 @@
 -- Music Visualizer : Cava 
 
 # ..Screenshots
-![image](https://user-images.githubusercontent.com/103060398/232033934-b57f58ae-2d5c-440c-87cf-bd513bd13431.png)
 
-![image](https://user-images.githubusercontent.com/103060398/232033971-5ff18f5c-1434-4eaf-a025-8058b51be4cb.png)
+![image](https://github.com/kevin-roan/dotfiles/assets/103060398/d9007dcc-28b0-4b44-92d2-7d168e34e968)
 
-![image](https://user-images.githubusercontent.com/103060398/232034204-af12b1af-0e06-4ca9-9df1-b5c35218059e.png)
+![image](https://github.com/kevin-roan/dotfiles/assets/103060398/5cd91d34-e5ec-413d-ad4a-f3b4a22f03dc)
 
-![image](https://user-images.githubusercontent.com/103060398/232034608-45476093-fdaf-464b-ada4-e14b962fcbc4.png)
-
+![image](https://github.com/kevin-roan/dotfiles/assets/103060398/39ae7dac-5265-4379-ba25-cf2cae72ec32)
 
 Dependencies;
 `xorg group` 
