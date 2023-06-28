@@ -9,7 +9,15 @@
 
 ![image](https://github.com/kevin-roan/dotfiles/assets/103060398/b1ead194-6e9d-4001-86be-2c72fc28b02c)
 
-### How to install 
-<hr>
-Dont install if you dont know how to install.
+### ingredients
+
+- Picom (Compositor)
+- Min (Browser)
+- Neovim (Text Editor)
+- Obsidian (Note Taking App)
+- Alacritty (Terminal)
+
+### How to Install 
+
+I kindly recommend that you refrain from installing it if you're not familiar with the installation process
  
