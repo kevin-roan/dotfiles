@@ -22,8 +22,11 @@ export ZSH=$HOME/.oh-my-zsh
 # ZSH_THEME="spaceship"
 # ZSH_THEME="agnoster"
 # ZSH_THEME="norm"
-ZSH_THEME="muse"
-# ZSH_THEME="random"
+ZSH_THEME="dpoggi"
+#
+#dst
+#'tjkirch_mod
+#candy-kingdom
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME="spaceship"
@@ -235,7 +238,5 @@ alias ebooks="cd /home/xtan/Sync/EBOKKS/"
 alias uninstall="sudo pacman -Rns"
 alias startmariadb="sudo systemctl start mariadb "
 alias startmysql="sudo systemctl start mysqld"
-# alias sd="cd ~ && cd \$(find * -type d | fzf) && tmux"
-# alias sd='tmux new-session -c "$(find * -type d | fzf)" -- nvim'
-alias sd='tmux new-session -c "$(find ~/lxarn-xw ~/projects -type d | fzf)" -- nvim'
-
+alias sd='tmux new-session -c "$(find ~/lxarn-xw ~/projects -maxdepth 5 -type d | fzf)" -- nvim'
+alias fmpv='$(find /media/ntfs/ReactTutorial -type f | fzf) --mpv'
