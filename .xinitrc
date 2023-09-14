@@ -55,18 +55,18 @@ export _JAVA_AWT_WM_NONREPARENTING=1 exec $1
 #wl_wayland fix
 export QT_QPA_PLATFORM=xcb
 
-#userdefinedstuffs.
 #you should run all the applications/scripts before executing the actual desktop environment.
 #other wise shit won't work
 # dwmblocks &
 # dwmblock like stuff
 statusline
-
+xfce4-power-manager --daemon &
 nitrogen --restore 
 picom & # comporsitor
 unclutter & #to auto hide cursor
-autoshutdown &
-# xrandr --output VGA-1 --primary
-# xrandr --output HDMI-0 --left-of LVDS
-# xrandr --output LVDS1 --off # dont know why i wrote this.
+autoshutdown & # shutdown when battery percentage reaches 5
+xset s 60 60 # screen timeout to 1 minute
+barrierc -f --no-tray --name Asus --disable-crypto 192.168.1.6:24800 & ## barrier client
+xset dpms 180 & # screen lock
+xss-lock -- slock & # screen lock
 exec dbus-run-session dwm

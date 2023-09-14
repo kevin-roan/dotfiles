@@ -1,3 +1,5 @@
 #!/bin/sh
 
-paplay ~/.local/share/sounds/uwu.ogg
+# paplay ~/.local/share/sounds/uwu.ogg
+# ffplay -nodisp -hide_banner -autoexit  ~/Sync/Music/blade.ogg
+ffplay -nodisp -hide_banner -autoexit  ~/.local/share/sounds/bamboo.ogg

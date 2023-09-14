@@ -174,9 +174,9 @@ On_Blue='\033[44m'  On_Purple='\033[45m' On_Cyan='\033[46m'  On_White='\033[47m'
 
 ## JAVA HOME FOR REACT NATIVE
 
-JAVA_HOME=$(dirname $( readlink -f $(which java) ))
-JAVA_HOME=$(realpath "$JAVA_HOME"/../)
-export JAVA_HOME
+ JAVA_HOME=$(dirname $( readlink -f $(which java) ))
+ JAVA_HOME=$(realpath "$JAVA_HOME"/../)
+ export JAVA_HOME
 
 #tmux color fix;
 export TERM=xterm-256color
@@ -206,6 +206,7 @@ export JAVA_HOME="/usr/lib/jvm/java-19-openjdk/bin/java"
 
 #-------------alias----------------------
 
+alias ls="lsd"
 alias ll="exa -l"
 alias project="~/Documents/MyProjects/Web/Attendance-Register/ && ls"
 alias yt="ytfzf -t"
@@ -215,10 +216,10 @@ alias scripts="cd ~/.local/bin"
 alias maachod="chmod +x"
 alias marja="shutdown now"
 alias soja="systemctl suspend"
-alias tuhaikon="whoami"
 alias chut="neofetch"
 alias trashcodes="cd ~/Documents/TrashCodes/"
 alias install="sudo pacman -S"
+alias uninstall="sudo pacman -Rn"
 alias g="git"
 alias stumdy="cd /home/xtan/Documents/Documents/stumdy/"
 alias pm="pulsemixer"
@@ -235,8 +236,13 @@ alias waylund="sudo systemctl start wayland-container.service"
 alias rem="trash-put"
 alias zt="zathura"
 alias ebooks="cd /home/xtan/Sync/EBOKKS/"
-alias uninstall="sudo pacman -Rns"
 alias startmariadb="sudo systemctl start mariadb "
 alias startmysql="sudo systemctl start mysqld"
 alias sd='tmux new-session -c "$(find ~/lxarn-xw ~/projects -maxdepth 5 -type d | fzf)" -- nvim'
 alias fmpv='$(find /media/ntfs/ReactTutorial -type f | fzf) --mpv'
+alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias rm-norestore="shred -zvu -n  5"
+alias halt="sudo systemctl hibernate"
+alias powersave="sudo auto-cpufreq --force=powersave"
+alias normal="sudo auto-cpufreq --force=reset"
+alias performance="sudo auto-cpufreq --force=performance"

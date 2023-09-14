@@ -1,0 +1,4 @@
+#!/bin/sh
+shit=$(adb connect 192.168.12.109:5555)
+notify-send "$shit" "  "
+sndcpy 192.168.12.109:5555

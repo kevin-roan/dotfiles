@@ -4,21 +4,28 @@
 memory ()
 {
   mem=$(free -h | awk '/Mem:/ { print $3 }' | cut -f1 -d 'i')
-  echo mem: $mem
+  echo Mem:$mem
   exit 0
 }
 
-volume ()
-{
-  vol=$(amixer get Master | tail -n1 | sed -r 's/.*\[(.*)%\].*/\1/')
-  echo vol: $vol
-  exit 0
-}
+ volume ()
+ {
+   vol=$(amixer get Master | tail -n1 | sed -r 's/.*\[(.*)%\].*/\1/')
+   echo $vol
+   exit 0
+ }
 
 battery ()
 {
   bat=$(acpi | awk '{if ($4 == "charging,") { print "100%"} else { print $4 }}' | tr -d ',')
-  echo bat: $bat
+  echo Bat:$bat
+  exit 0
+}
+
+temp()
+{
+  temp=$(sensors | awk '/Core 0/ {print $3}')
+  echo Tem:$temp
   exit 0
 }
 
@@ -45,11 +52,11 @@ update() {
 
 rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
 tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
-printf "🔺%4sB 🔻%4sB\\n" $(numfmt --to=iec $rx $tx)
+printf " %4sB  %4sB\\n" $(numfmt --to=iec $rx $tx)
 }
 
 while true; do
-  xsetroot -name "/ $(memory) / $(volume) / $(battery) / $(date +"%H:%M") / $(nettraf) "
+  xsetroot -name "$(memory) | $(battery) | $(temp) | $(date +"%I:%M") | $(nettraf) "
   sleep 1s
 done &
 

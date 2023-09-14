@@ -1,16 +1,11 @@
-#!/bin/bash
-while true; do
-status=$(cat /sys/class/power_supply/BAT0/status)
-battery_percent=$(cat /sys/class/power_supply/BAT0/capacity)
-  if [ "$status" == Discharging ] && [ "$battery_percent" -le 4 ]; then 
-    notify-send "Critical Battery Percentage " "Save Your Work Bitch..!!"
-    sleep 58
- 
-  if [ "$status" == Discharging ] && [ "$battery_percent" -le 4 ]; then 
-    notify-send "Shutting Down" ":("
-    sleep 2
-    shutdown now
-fi
-  fi
-  sleep 240
-done
+#!/bin/sh
+acpi -b | grep "Battery 0" | awk -F'[,:%]' '{print $2, $3}' | {
+	read -r status capacity
+
+	if [ "$status" = Discharging -a "$capacity" -lt 5 ]; then
+        playerctl stop --all-players # Stop all media
+        notify-send "Battery Critically Low" "The computer will power off in 30 seconds to prevent data loss." -u critical -i "battery-alert" -r 9991
+		sleep 30
+		systemctl sleep
+	fi
+}
